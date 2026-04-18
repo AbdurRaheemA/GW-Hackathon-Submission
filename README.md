@@ -16,6 +16,7 @@ Personalized Dietary Planner which incorporates elements of calorie, and nutriti
 #### Deliverables
 1. Personalized AI Model which takes user health data and produces personalized daily calorie/nutrition intake
 2. Utilizing AI model outputs to filter through recipe API to produce desired recipes that fit nutritional guidelines
+3. Website that can present daily recipes of meals suited towards the user, factoring in suggested calories, nutrition guidelines, and dietary restrictions/preferences
 
 #### Extras
 - Cuisine Choice
