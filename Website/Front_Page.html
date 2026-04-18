@@ -2,9 +2,44 @@
 <html>
 <head>
     <title>
-        
+        Website
     </title>
 </head>
+<body>
+    <link rel="stylesheet" href="style.css">
+
+    <div class="container">
+        <h1>Calorie Count</h1>
+        <form id="POST">
+            <div class="form-input">
+                <label>Weight: </label>
+                <input type="number" name="weight" required>
+            </div>
+            <div class="form-input">
+                <label>Height: </label>
+                <input type="number" name="height" required>
+            </div>
+            <div class="form-input">
+                <label>Age: </label>
+                <input type="number" name="age" required>
+            </div>
+            <div class="form-input">
+                <label>Gender: </label>
+                <select name="gender">
+                    <option value="m">Male</option>
+                    <option value="f">Female</option>
+                </select>
+            </div>
+
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+
+    <style>
+
+    </style>
+</body>
+</html>
 
 
 
