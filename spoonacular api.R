@@ -22,7 +22,7 @@ recipe_list <- as_tibble(data$results)
 view(recipe_list)
 
 ## get details
-ids <- paste(recipe_list$id[1:], collapse = ",")
+ids <- paste(recipe_list$id[1:100], collapse = ",")
 
 resp2 <- request("https://api.spoonacular.com/recipes/informationBulk") |>
   req_url_query(
