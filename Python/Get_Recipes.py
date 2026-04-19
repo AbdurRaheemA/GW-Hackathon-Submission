@@ -5,10 +5,27 @@ import Nutrient_Targets
 # Reads the csv of potential recipies
 df = pd.read_csv("R\\Hackathon_Spreadsheet.csv")
 
+
+# Intended to get from a file provided by the web page
 User_Information = {"Height": None,
                     "Weight": None,
                     "Age": None,
                     "Gender": None}
+
+# Mock User Data
+temp = []
+with open("Python\mock_user_data.txt") as f:
+    for i in f:
+        temp.append(i)
+
+step = 0
+for j in User_Information.keys():
+    User_Information[j] = temp[step]
+    step+=1
+
+User_Information["Height"] = float(User_Information["Height"])
+User_Information["Weight"] = float(User_Information["Weight"])
+User_Information["Age"] = float(User_Information["Age"])
 
 # Creates the total daily calories a User should consume
 User_Total_Calories = Calorie_Estimation(User_Information["Weight"], 
@@ -17,7 +34,7 @@ User_Total_Calories = Calorie_Estimation(User_Information["Weight"],
                                          User_Information["Gender"])
 
 # Calculations for Food Group Breakdown
-User_Nutrients = Nutrient_Targets.Nutrient_Breakdown(User_Information["age"], User_Total_Calories)
+User_Nutrients = Nutrient_Targets.Nutrient_Breakdown(User_Information["Age"], User_Total_Calories)
 User_Food_Groups = Nutrient_Targets.Nutrient_to_Food_Group(User_Nutrients)
 
 # Compiles information from Calorie_Estimation and Nutrient_Targets

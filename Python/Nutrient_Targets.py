@@ -94,9 +94,12 @@ def Nutrient_to_Food_Group(nutrient_breakdown):
             newRow.append(i)
         myArr.append(newRow)
 
-    myArr[0]/=9
-    myArr[3]/=4
-    myArr[4]/=4
+    for i in myArr[0]:
+        i/=9
+    for i in myArr[3]:
+        i/=4
+    for i in myArr[4]:
+        i/=4
     
     return {"Fat": (myArr[0][0], myArr[0][1]),
             "Carbohydrates": (myArr[3][0], myArr[3][1]),
