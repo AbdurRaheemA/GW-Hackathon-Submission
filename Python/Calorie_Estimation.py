@@ -6,6 +6,7 @@
 # Harris-Benedict Equaiton
 # Katch_McArdle Equation
 
+
 def Calorie_Estimation(weight, height, age, gender):
 
     gender = gender.lower()
@@ -32,17 +33,6 @@ def Calorie_Estimation(weight, height, age, gender):
     
 
 
-while True:
-    try:   
-        weight = int(input("What is your Weight?"))
-        height = int(input("What is your Height?"))
-        age = int(input("Enter your age:"))
-        gender = str(input("What is your Gender? M or F?"))
-
-        
-    except ValueError:
-        print("Invalid Input.")
-        break
     
 
         

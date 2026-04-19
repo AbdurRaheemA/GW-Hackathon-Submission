@@ -1,0 +1,19 @@
+body {
+    background-color: whitesmoke;
+    justify-content: center;
+    display: flex;
+    align-items: left top;
+    height: 39vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.container{
+    width: 500px;
+    padding: 20px;
+    background-color: gray;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
