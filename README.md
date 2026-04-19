@@ -1,6 +1,5 @@
 ## GW Hackathon Submission
-### Track 1
-### Problem 3
+### Track 1 - Problem 3
 ##### Group Members: Ashley Totten, Amelia Tran, Abdur Raheem Ali, Mikael Makonnen
 
 #### Question
@@ -14,8 +13,8 @@ Personalized Dietary Planner which incorporates elements of calorie, and nutriti
 - Meals for the day (generic)
 
 #### Deliverables
-1. Personalized AI Model which takes user health data and produces personalized daily calorie/nutrition intake
-2. Utilizing AI model outputs to filter through recipe API to produce desired recipes that fit nutritional guidelines
+1. Personalized Model which takes user health data and produces personalized daily calorie/nutrition intake
+2. Utilizing model outputs to filter through recipe API to produce desired recipes that fit nutritional guidelines
 3. Website that can present daily recipes of meals suited towards the user, factoring in suggested calories, nutrition guidelines, and dietary restrictions/preferences
 
 #### Extras

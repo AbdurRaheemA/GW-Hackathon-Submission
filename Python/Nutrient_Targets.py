@@ -77,12 +77,14 @@ def Nutrient_Breakdown(user_age, total_calories):
             "Protein": (Lower_Protein, Upper_Protein)
             }
 
+# ----- Dropping Acids due to Time Constraints ----- #
+
 # Converts the previously calculated percentages from the 
 # Nutrient_Breakdown() function into human-readable information
 
-# Calculated using the following source
-# https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t4/?report=objectonly
-def Nutrient_to_Food_Group(user_age, user_gender, nutrient_breakdown):
+# Calculated using the following source (table at the bottom)
+# https://www.fao.org/4/y5022e/y5022e04.htm
+def Nutrient_to_Food_Group(nutrient_breakdown):
 
     # Converts dictionary to array for easier referencing #
     myArr = []
@@ -92,32 +94,13 @@ def Nutrient_to_Food_Group(user_age, user_gender, nutrient_breakdown):
             newRow.append(i)
         myArr.append(newRow)
 
-    # --- Calorie to Food Group (g) for those 6 months or younger --- #
-    if user_age<00.5:
-        pass
+    myArr[0]/=9
+    myArr[3]/=4
+    myArr[4]/=4
     
-    # --- Calorie to Food Group (g) for those 12 months or younger --- #
-    elif user_age<=1:
-        pass
-
-    # --- Calorie to Food Group (g) for those ages 3 or younger --- #
-    elif user_age<=3:
-        pass
-
-    # --- Calorie to Food Group (g) for those ages 8 or younger --- #
-    elif user_age<=8:
-        pass
-
-    elif user_gender == "F":
-        pass
-
-    else:
-        pass
-
-# Converts body weight to suggested water intake
-
-def Water_Intake(body_weight):
-    pass
+    return {"Fat": (myArr[0][0], myArr[0][1]),
+            "Carbohydrates": (myArr[3][0], myArr[3][1]),
+            "Proten": (myArr[4][0], myArr[4][1])}
 
 # Calorie to Grams Calculator
 # Maybe make the dictionary a numpy array
