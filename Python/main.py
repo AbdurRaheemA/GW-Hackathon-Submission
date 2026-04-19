@@ -3,6 +3,9 @@ from Nutrient_Targets import Nutrient_Breakdown, user_age, total_calories
 
 
 from flask import Flask, render_template, request
+import json
+import os
+
 app = Flask(__name__)
 
 
@@ -23,6 +26,8 @@ def home():
         except ValueError:
             calories = "Invalid Input"
             nutrients = "Invalid"
+
+            
 
     return render_template('index.html', result=calories, macros=nutrients)
 

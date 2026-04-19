@@ -8,6 +8,9 @@
 <body>
     <link rel="stylesheet" href="style.css">
 
+
+</body>
+
     <div class="container">
         <h1>Calorie Count</h1>
         <form id="POST">
@@ -33,7 +36,35 @@
 
             <button type="submit">Calculate</button>
         </form>
+        <h2 id="result"></h2>
     </div>
+
+        <script>
+        function saveToFile() {
+            const data= {
+                name: document.getElementById("name").value,
+                calories: document.getElementById("calories").value
+            };
+
+            const json = JSON.stringify(data, null, 2);
+            const blob = new Blob([json], {type: "application/json"});
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "user_data_json";
+            a.click();
+        }
+
+        document.getElementById('calorieForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const weight = parseFloat(document.getElementById('weight').value);
+            const height = parseFloat(document.getElementById('height').value);
+            const age = parseInt(document.getElementById('age').value);
+            const gender = document.getElementById('gender').value;
+        })
+    </script>
 
     <style>
 

@@ -18,12 +18,12 @@ body {
 }
 
 h1, h2, h3 {
-    color: blanchedalmond;
+    color: rgb(198, 166, 118);
     text-align: center;
 }
 
 .form-input {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     display: flex;
     flex-direction: column;
 }
