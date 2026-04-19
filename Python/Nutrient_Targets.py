@@ -85,8 +85,12 @@ def Nutrient_Breakdown(user_age, total_calories):
 def Nutrient_to_Food_Group(user_age, user_gender, nutrient_breakdown):
 
     # Converts dictionary to array for easier referencing #
-    for nutrient_group, nutrient_range in nutrient_breakdown:
-        pass
+    myArr = []
+    for nutrient_group in nutrient_breakdown.keys():
+        newRow = []
+        for i in nutrient_breakdown[nutrient_group]:
+            newRow.append(i)
+        myArr.append(newRow)
 
     # --- Calorie to Food Group (g) for those 6 months or younger --- #
     if user_age<00.5:
@@ -116,3 +120,4 @@ def Water_Intake(body_weight):
     pass
 
 # Calorie to Grams Calculator
+# Maybe make the dictionary a numpy array
